@@ -16,4 +16,4 @@ jobs:
         script: |
           cd /var/www/student_manager
           git pull
-          curl -X POST -H "Content-Type: application/json" -H "Authorization: MTE3MjA5MDM2Njk3MTg3NTQzOA.GSaROw.EevZhCo8UMIMPH3KdbJ2FepHw-PENy5HCm8ZA4" -d '{"content":"@everyone Dự Án Student-Manager Vừa Deploy Phiên Bản Mới link: https://miao.io.vn/"}' https://discord.com/api/v9/channels/1189872165470871632/messages
+          curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.DC }}" -d '{"content":"@everyone Dự Án Student-Manager Vừa Deploy Phiên Bản Mới link: https://miao.io.vn/"}' https://discord.com/api/v9/channels/1189872165470871632/messages
