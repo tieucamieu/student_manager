@@ -15,7 +15,6 @@ let studentListBase = [
 
 if (!localStorage.getItem("students")) localStorage.setItem("students", JSON.stringify(studentListBase));
 
-
 function printDataDom(students) {
     let studentManagerTableBodyEl = document.querySelector(".studentManagerTableBody");
     if (!studentManagerTableBodyEl) return
@@ -47,7 +46,6 @@ function printDataDom(students) {
 /* First Load */
 printDataDom(JSON.parse(localStorage.getItem("students")))
 
-
 function addStudent() {
     let newStudent = {
         id: "STUDENT_JS231130_" + Math.ceil(Date.now() * Math.random()),
@@ -69,7 +67,6 @@ function deleteStudent(studentId) {
     localStorage.setItem("students", JSON.stringify(students))
     printDataDom(students)
 }
-
 
 function updateStudent(studentId) {
     let students = JSON.parse(localStorage.getItem("students"));
@@ -106,8 +103,6 @@ function search() {
     }
     printDataDom(result)
 }
-
-
 
 function format(str) {
     str = str.toLowerCase();
