@@ -11,7 +11,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        password: ${{ secrets.PASS }}
         port: 22
         script: |
           cd /var/www/student_manager
